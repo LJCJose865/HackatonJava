@@ -36,8 +36,9 @@ public class HackatonJava {
        saludar("Jose", 21);
        
        System.out.println("Ingresa la hora del día (0-23): ");
-       Scanner scanner = new Scanner(System.in);
-       int hora = scanner.nextInt();
-       System.out.println(obtenerSaludo(hora));
+       try (Scanner scanner = new Scanner(System.in)) {
+        int hora = scanner.nextInt();
+           System.out.println(obtenerSaludo(hora));
+    }
     }
 }
