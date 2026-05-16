@@ -6,38 +6,38 @@ public class hackatonjava2 {
     
     public static double calcularPromedio() {
 
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            int[] notas = new int[100];
+            int cantidad = 0;
+            int suma = 0;
 
-        int[] notas = new int[100];
-        int cantidad = 0;
-        int suma = 0;
+            String continuar = "si";
 
-        String continuar = "si";
+            while (continuar.equalsIgnoreCase("si")) {
 
-        while (continuar.equalsIgnoreCase("si")) {
+               System.out.print("Ingrese una nota (0-100): ");
+                int nota = sc.nextInt();
 
-           System.out.print("Ingrese una nota (0-100): ");
-            int nota = sc.nextInt();
+                if (nota >= 0 && nota <= 100) {
 
-            if (nota >= 0 && nota <= 100) {
+                    notas[cantidad] = nota;
 
-                notas[cantidad] = nota;
+                    suma = suma + nota;
 
-                suma = suma + nota;
+                    cantidad++;
 
-                cantidad++;
+                } else {
 
-            } else {
+                    System.out.println("Nota inválida. Debe estar entre 0 y 100.");
 
-                System.out.println("Nota inválida. Debe estar entre 0 y 100.");
+                }
 
+                System.out.print("¿Desea ingresar otra nota? (si/no): ");
+                continuar = sc.next();
             }
 
-            System.out.print("¿Desea ingresar otra nota? (si/no): ");
-            continuar = sc.next();
+            return (double) suma / cantidad;
         }
-
-        return (double) suma / cantidad;
     }
 
     public static void main(String[] args) {
