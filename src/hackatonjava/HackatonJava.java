@@ -12,7 +12,6 @@ import java.util.Scanner;
  */
 
 public class HackatonJava {
-    private static Scanner scanner;
 
     //Metodo sin retorno para salundar a una persona.
     public static void saludar(String nombre, int edad) {
@@ -22,7 +21,7 @@ public class HackatonJava {
     public static String obtenerSaludo(int hora){
         //Solicitar al usuario que ingrese la hora del día
         try (Scanner sc = new Scanner(System.in)) {
-            System.out.println("Ingresa la hora del día (0-23): ");
+            System.out.println("Ingresa la hora del día (0:am -23:pm): ");
             hora = sc.nextInt();
         }
         //funcion if else para determinar el saludo según la hora del día
