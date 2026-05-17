@@ -4,13 +4,12 @@
  */
 package hackatonjava;
 
-import java.util.Scanner;
-
 /**
  *
  * @author josep
  */
 public class HackatonJava {
+<<<<<<< HEAD
     //Metodo sin retorno para salundar a una persona.
     public static void saludar(String nombre, int edad) {
         System.out.println("¡Hola " + nombre + "! Tienes " + edad + " años.");
@@ -25,20 +24,26 @@ public class HackatonJava {
             return "¡Buenas noches!";
         }
         return "Hora no válida.";
+        try (Scanner scanner = new Scanner(System.in)) {
+        int hora1 = scanner.nextInt();
+            System.out.println(obtenerSaludo(hora1));
+     }
     }
+=======
+>>>>>>> parent of 96b6c92 (featIntroduccion de las funciones Static void saludar y String Obtener saludo)
 
     /**
      * @param args the command line arguments
      */
-
-    
     public static void main(String[] args) {
+<<<<<<< HEAD
        saludar("Jose", 21);
        
        System.out.println("Ingresa la hora del día (0-23): ");
-       try (Scanner scanner = new Scanner(System.in)) {
-        int hora = scanner.nextInt();
-           System.out.println(obtenerSaludo(hora));
+    saludar.accept(obtenerSaludo.apply(hora))
+=======
+        // TODO code application logic here
+>>>>>>> parent of 96b6c92 (featIntroduccion de las funciones Static void saludar y String Obtener saludo)
     }
-    }
+    
 }
