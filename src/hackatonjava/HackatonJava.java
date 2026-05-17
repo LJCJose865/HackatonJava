@@ -42,9 +42,11 @@ public class HackatonJava {
 
     
     public static void main(String[] args) {
+        //Enbes de llamar a los métodos por separado, se llama al método completo que incluye ambos métodos.
         saludarCompleto( "Jose", 21, 9);
         saludarCompleto("Agie", 17, 13);
         saludarCompleto("Aljandro", 18, 18);
+        //Este es para demostrar el caso de una hora no válida.
         saludarCompleto("Nicolas", 16, 24);
     }
 }
