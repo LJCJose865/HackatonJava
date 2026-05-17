@@ -4,7 +4,6 @@
  */
 package hackatonjava;
 
-import java.util.Scanner;
 
 /**
  *
@@ -13,30 +12,6 @@ import java.util.Scanner;
 
 public class HackatonJava {
 
-    //menu para llamar las funciones por separado
-    public static void menuOpcionesSaludo(){
-        System.out.println("Elija una opción:");
-        System.out.println("1. Saludar");
-        System.out.println("2. Obtener saludo");
-        System.out.println("3. Saludar completo");
-        try (Scanner sc = new Scanner(System.in)) {
-            int opcion = sc.nextInt();
-            switch (opcion) {
-                case 1:
-                    saludar("Jose", 21);
-                    break;
-                case 2:
-                    String obtenerHora = obtenerSaludo(0);
-                    System.out.println(obtenerHora);
-                    break;
-                case 3:
-                    saludarCompleto("Maria", 30, 0);
-                    break;
-                default:
-                    System.out.println("Opción no válida.");
-            }
-        }
-    }
 
     //Metodo sin retorno para salundar a una persona.
     public static void saludar(String nombre, int edad) {
@@ -44,11 +19,6 @@ public class HackatonJava {
     }
     //Metodo con retorno para obtener un saludo según la hora del día.
     public static String obtenerSaludo(int hora){
-        //Solicitar al usuario que ingrese la hora del día
-        try (Scanner sc = new Scanner(System.in)) {
-            System.out.println("Ingresa la hora del día (0:am -23:pm): ");
-            hora = sc.nextInt();
-        }
         //funcion if else para determinar el saludo según la hora del día
         if (hora >= 0 && hora <= 11){
             return "¡Buenos días!";
@@ -61,12 +31,8 @@ public class HackatonJava {
         return "Hora no válida.";
     }
      public static void saludarCompleto(String nombre, int edad, int hora){
-        //llamando al metodo void 
         saludar(nombre, edad);
-    
-        //Llamando al metodo con retorno para conbinarlo en la función
-        String saludo = obtenerSaludo(hora);
-        System.out.println(saludo);
+        System.out.println(obtenerSaludo(hora));
      }
 
 
@@ -76,8 +42,9 @@ public class HackatonJava {
 
     
     public static void main(String[] args) {
-        //Llamamos el menu para mostrar las opciones al usuario, envez de tener varias funciones en el main, se llama al menu para mostrar las opciones al usuario.
-        menuOpcionesSaludo();
-
+        saludarCompleto( "Jose", 21, 9);
+        saludarCompleto("Agie", 17, 13);
+        saludarCompleto("Aljandro", 18, 18);
+        saludarCompleto("Nicolas", 16, 24);
     }
 }
