@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class HackatonJava {
 
     //menu para llamar las funciones por separado
-    public static void menu(){
+    public static void menuOpcionesSaludo(){
         System.out.println("Elija una opción:");
         System.out.println("1. Saludar");
         System.out.println("2. Obtener saludo");
@@ -76,15 +76,8 @@ public class HackatonJava {
 
     
     public static void main(String[] args) {
-        //llamada del metodo saludar para saludar a una persona con su nombre y edad. sin retorno
-       saludar("Jose", 21);
-
-       //llamada del metodo obtenerSaludo para obtener un saludo según la hora del día. con retorno
-      /*String obtenerHora = obtenerSaludo(0);
-         System.out.println(obtenerHora);*/
-       
-       //llamado al metodo saludar completo
-         saludarCompleto("Maria", 30, 0);  
+        //Llamamos el menu para mostrar las opciones al usuario, envez de tener varias funciones en el main, se llama al menu para mostrar las opciones al usuario.
+        menuOpcionesSaludo();
 
     }
 }
