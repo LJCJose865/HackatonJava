@@ -1,8 +1,31 @@
 package hackatonjava;
 
+import java.util.Scanner;
 public class HackatonJava3 {
-
-
+ 
+  public static void main(String[] args) {
+        //El método main() sólo llama funciones, sin lógica directa
+       validarContrasena();
+    }
+    
+    public static void validarContrasena () {
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("=== VALIDADOR DE CONTRASEÑAS INTERACTIVO ===");
+        System.out.print("Por favor, escribe la contraseña que quieres evaluar: ");
+        
+        
+        String contrasenaUsuario = teclado.nextLine(); 
+        
+       
+        String resultado = evaluarContrasena(contrasenaUsuario);
+        
+        System.out.println("\n--- RESULTADO DE LA EVALUACIÓN ---");
+        System.out.println("Tu contraseña es: " + contrasenaUsuario);
+        System.out.println("Nivel de seguridad: " + resultado);
+        
+       
+    }
  // =========================================================================
     // RETO 03: VALIDADOR DE CONTRASEÑAS
     // =========================================================================
@@ -75,20 +98,17 @@ public class HackatonJava3 {
     } 
 
     // Tarea 7: Caso de prueba automatica de validacion de contraseñas
-    public static void probarReto3() {
+    /*public static void probarReto3() {
         System.out.println("--- PRUEBA AUTOMATICA DE VALIDACION DE CONTRASENA ---");
         System.out.println("Probando 'password': " + evaluarContrasena("password"));
         System.out.println("Probando 'Password123': " + evaluarContrasena("Password123"));
         System.out.println("Probando 'Pass123!': " + evaluarContrasena("Pass123!"));
         System.out.println("Probando 'corta': " + evaluarContrasena("corta"));
-        System.out.println("Probando 'danielortiz': " + evaluarContrasena("solominusculas"));
+        System.out.println("Probando 'danielortiz': " + evaluarContrasena("solominusculas"));*/
     }
 
 
     
-     public static void main(String[] args) {
-        //El método main() sólo llama funciones, sin lógica directa
-        probarReto3();
+  
        
-    }
-}
+    
