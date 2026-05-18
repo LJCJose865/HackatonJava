@@ -5,6 +5,9 @@ public class HackatonJava4 {
     //      ORDENADOR Y BUSCADOR RETO 04
     //-------------------------------------------//
 
+    //-----------------------//
+    //      Intercambio     //
+    //-----------------------//
     // Método para ordenar un array de enteros utilizando el algoritmo de ordenamiento por burbuja.
     public static void intercambiar(int[] arr, int i, int j) {
         // Intercambia los elementos en las posiciones i y j del array.
@@ -32,10 +35,45 @@ public class HackatonJava4 {
         //el mostrarArray es un método que se encarga de imprimir los elementos del array en la consola, para verificar el resultado del intercambio.
         mostarArray(numeros);
     }
+
+    //----------------------//
+    //      BubbleSort     //
+    //--------------------//
+
+    //Metodo ordenamiento burbuja para ordenar los enteros de una lisde de menor a mayor
+    public  static void bubbleSort(int[] arr){
+        int num = arr.length; /*Para optener la longitud de array*/
+        //esta funciion compara cada elemento de la listacon el siguiente y los intercambia si estan en orden incorrecto, hasta que la lista este ordenada.
+        for (int i = 0; i < num - 1; i++){
+            //Este es el bucle que se encarga de comparar cada elemento con el siguiente.
+            for (int j = 0; j < num - i - 1; j++){
+                if (arr[j] > arr[j + 1]){ /*Si el elemento actual es mayor que el siguiente, se realiza el intercambio*/
+                    intercambiar(arr, j, j + 1);//Llamamos al método de intercambio para realizar el intercambio de los elementos.
+                }
+            }
+        }
+
+    }
+
+    //Prueba del método de ordenamiento burbuja
+    public static void probarBubbleSort(){
+        int[] numeros = {64, 34, 25, 12, 22, 11, 90};
+        System.out.println("Lista antes de ordenar:");
+        mostarArray(numeros);
+        bubbleSort(numeros); // Llama al método de ordenamiento burbuja para ordenar el array.
+        System.out.println("Lista después de ordenar:");
+        mostarArray(numeros);
+    }
+
+    //-----------------------//
+    //   Busqueda Lineal    //
+    //----------------------//
     
     public static void main(String[] args) {
         //Con solo este método se puede probar el funcionamiento del método de intercambio.
         pruebaIntercambio();
+        //Con este método se puede probar el funcionamiento del método de ordenamiento burbuja.
+        probarBubbleSort();
     }
 }
 
