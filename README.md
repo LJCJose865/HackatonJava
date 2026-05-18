@@ -1,11 +1,7 @@
+
 Proyecto realizado por:
 Jose David Peres @LJCJose865 
-Angie Katalina Fajardo @
+Angie Katalina Fajardo @Katalina04
 Nicolas Correa @Nicolasc-08
 Alenajdro  Bonilla @AlejandroBon37
-Daniel Estiven Ortiz @
-
-1: Saludador Inteligente 
-
-1.1: Saludo sin retorno
-Utilizamos la funcion static void para  crear un saludo que muestre nuestro nombre y edad sin nesesidad de retornar datos.
+Daniel Estiven Ortiz @DanielOrtiz15
