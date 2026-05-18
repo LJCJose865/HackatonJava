@@ -5,7 +5,6 @@ public class hackatonjava2 {
 
     static Scanner sc = new Scanner(System.in);         /*Estas variables van a ser globales para utilizarlas
                                                         en los metodos que las necesiten */
-
     static String[] nombres = new String[100];
 
     static double[][] notas = new double[100][10];
@@ -77,7 +76,6 @@ public class hackatonjava2 {
 
     public static double buscarMayor() {            /*segundo punto, busca la mayor nota entre todos los estudiantes
                                                     (solo las notas ingresadas no la nota promedio)*/
-
         double mayor = notas[0][0];
 
         for (int i = 0; i < cantidadEstudiantes; i++) {
@@ -114,7 +112,6 @@ public class hackatonjava2 {
 
     public static int contarAprobados(double notaMinima) {      /*cuarto punto, cuenta la cantidad de estudiantes aprobados
                                                                 */
-
         int aprobados = 0;
 
         for (int i = 0; i < cantidadEstudiantes; i++) {
@@ -174,17 +171,11 @@ public class hackatonjava2 {
     }
 
     public static void main(String[] args) {        //solo llamado de los metodos
-
         ingresarDatos();
-
         mostrarPromedios();
-
         mostrarMayor();
-
         mostrarMenor();
-
         mostrarAprobados();
-
         mostrarReporte(5.5);
     }
 }
