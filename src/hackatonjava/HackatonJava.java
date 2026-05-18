@@ -6,17 +6,26 @@ package hackatonjava;
 
 
 /**
- *
+ * El saludador inteligente es un programa que saluda a las personas de manera personalizada según su nombre, edad y la hora del día.
+ * El programa tiene dos métodos principales: saludar() y obtenerSaludo(). El método saludar() recibe el nombre y la edad de la persona y muestra un mensaje de saludo personalizado. 
+ * El método obtenerSaludo() recibe la hora del día y devuelve un saludo adecuado (buenos días, buenas tardes o buenas noches).
+ * El programa también incluye un método saludarCompleto() que combina ambos métodos para proporcionar un
  * @author josep
  */
 
 public class HackatonJava {
 
 
+    //------------------------------------------//
+    // RETO 01: SALUDADOR INTELIGENTE
+    //------------------------------------------//
+
     //Metodo sin retorno para salundar a una persona.
     public static void saludar(String nombre, int edad) {
         System.out.println("¡Hola " + nombre + "! Tienes " + edad + " años.");
     }
+
+
     //Metodo con retorno para obtener un saludo según la hora del día.
     public static String obtenerSaludo(int hora){
         //funcion if else para determinar el saludo según la hora del día
@@ -30,17 +39,19 @@ public class HackatonJava {
         //por si el usuario ingresa una hora no válida, se le indicará que la hora no es válida.
         return "Hora no válida.";
     }
-     public static void saludarCompleto(String nombre, int edad, int hora){
+    
+    /**
+     * Método completo que combina ambos métodos para proporcionar un saludo completo, asi no toca lñlamar individualmente a cada método.
+     * @param nombre El nombre de la persona a saludar.
+     * @param edad La edad de la persona a saludar.
+     * @param hora La hora del día.
+     */
+    public static void saludarCompleto(String nombre, int edad, int hora){
         saludar(nombre, edad);
         System.out.println(obtenerSaludo(hora));
      }
 
 
-    /**
-     * @param args the command line arguments
-     */
-
-    
     public static void main(String[] args) {
         //Enbes de llamar a los métodos por separado, se llama al método completo que incluye ambos métodos.
         saludarCompleto( "Jose", 21, 9);
