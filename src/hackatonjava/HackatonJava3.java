@@ -9,20 +9,20 @@ public class HackatonJava3 {
     }
     
     public static void validarContrasena () {
-        Scanner teclado = new Scanner(System.in);
-        
-        System.out.println("=== VALIDADOR DE CONTRASEÑAS INTERACTIVO ===");
-        System.out.print("Por favor, escribe la contraseña que quieres evaluar: ");
-        
-        
-        String contrasenaUsuario = teclado.nextLine(); 
-        
-       
-        String resultado = evaluarContrasena(contrasenaUsuario);
-        
-        System.out.println("\n--- RESULTADO DE LA EVALUACIÓN ---");
-        System.out.println("Tu contraseña es: " + contrasenaUsuario);
-        System.out.println("Nivel de seguridad: " + resultado);
+        try (Scanner teclado = new Scanner(System.in)) {
+            System.out.println("=== VALIDADOR DE CONTRASEÑAS INTERACTIVO ===");
+            System.out.print("Por favor, escribe la contraseña que quieres evaluar: ");
+            
+            
+            String contrasenaUsuario = teclado.nextLine(); 
+            
+      
+            String resultado = evaluarContrasena(contrasenaUsuario);
+            
+            System.out.println("\n--- RESULTADO DE LA EVALUACIÓN ---");
+            System.out.println("Tu contraseña es: " + contrasenaUsuario);
+            System.out.println("Nivel de seguridad: " + resultado);
+        }
         
        
     }
