@@ -11,6 +11,7 @@ package hackatonjava;
  * El método obtenerSaludo() recibe la hora del día y devuelve un saludo adecuado (buenos días, buenas tardes o buenas noches).
  * El programa también incluye un método saludarCompleto() que combina ambos métodos para proporcionar un
  * @author josep
+ * @author LJC865P
  */
 
 public class HackatonJava {

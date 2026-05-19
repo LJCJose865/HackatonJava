@@ -6,7 +6,8 @@ package hackatonjava;
 
 /**
  *
- * @author deisy
+ * @author LJC865P
+ * @author Katalina04
  */
 public class Hackatonjava5 {
 // ----------------------------------------//
