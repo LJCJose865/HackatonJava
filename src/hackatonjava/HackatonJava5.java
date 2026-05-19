@@ -9,7 +9,7 @@ package hackatonjava;
  * @author LJC865P
  * @author Katalina04
  */
-public class Hackatonjava5 {
+public class HackatonJava5 {
 // ----------------------------------------//
 // SISTEMA DE INVENTARIO MODULAR RETO 05  //
 //----------------------------------------//
