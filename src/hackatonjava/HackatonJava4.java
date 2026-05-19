@@ -7,11 +7,7 @@ public class HackatonJava4 {
     //-----------------------//
     //      Intercambio     //
     //-----------------------//
-<<<<<<< HEAD
-    // Método para ordenar un array de enteros utilizando el algoritmo de ordenamiento por burbuja.
-=======
-    
->>>>>>> developer
+
     public static void intercambiar(int[] arr, int i, int j) {
         // Intercambia los elementos en las posiciones i y j del array.
         int temporal = arr[i];
@@ -43,11 +39,9 @@ public class HackatonJava4 {
     //      BubbleSort     //
     //--------------------//
 
-<<<<<<< HEAD
-    //Metodo ordenamiento burbuja para ordenar los enteros de una lisde de menor a mayor
-=======
+
     //Metodo ordenamiento burbuja para ordenar los enteros de una lista de menor a mayor
->>>>>>> developer
+
     public  static void bubbleSort(int[] arr){
         int num = arr.length; /*Para optener la longitud de array*/
         //esta funciion compara cada elemento de la listacon el siguiente y los intercambia si estan en orden incorrecto, hasta que la lista este ordenada.
@@ -65,25 +59,19 @@ public class HackatonJava4 {
     //Prueba del método de ordenamiento burbuja
     public static void probarBubbleSort(){
         int[] numeros = {64, 34, 25, 12, 22, 11, 90};
-<<<<<<< HEAD
-        System.out.println("Lista antes de ordenar:");
-        mostarArray(numeros);
-        bubbleSort(numeros); // Llama al método de ordenamiento burbuja para ordenar el array.
-        System.out.println("Lista después de ordenar:");
-=======
+
         System.out.println("\nLista antes de ordenar:");
         mostarArray(numeros);
         bubbleSort(numeros); // Llama al método de ordenamiento burbuja para ordenar el array.
         System.out.println("\nLista después de ordenar:");
->>>>>>> developer
+
         mostarArray(numeros);
     }
 
     //-----------------------//
     //   Busqueda Lineal    //
     //----------------------//
-<<<<<<< HEAD
-=======
+
 
     //Creación de metodo par buscar el indice de  un objeto en una lista de enteros (usando busqueda lineal)
     public static int busquedaLineal(int [] arr, int objeto){
@@ -196,15 +184,13 @@ int indice = busquedaBinaria(numeros, objetivo);
 System.out.println("El indice del numero" + objetivo + ": es el: " + indice);
 
 }
->>>>>>> developer
     
     public static void main(String[] args) {
         //Con solo este método se puede probar el funcionamiento del método de intercambio.
         pruebaIntercambio();
         //Con este método se puede probar el funcionamiento del método de ordenamiento burbuja.
         probarBubbleSort();
-<<<<<<< HEAD
-=======
+
         //Con solo esta linea de codigo en el main se puede probar el funcionamiento del método de búsqueda lineal.
         probarBusquedaLineal();
         //Con solo esta linea de codigo en el main se puede probar el funcionamiento del método de búsqueda binaria.
@@ -214,7 +200,7 @@ System.out.println("El indice del numero" + objetivo + ": es el: " + indice);
         //        Prueba Reto 04         //
         //------------------------------//
         probarRetoCompleto();
->>>>>>> developer
+
     }
 }
 
