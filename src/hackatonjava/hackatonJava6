@@ -1,0 +1,124 @@
+public class HackathonJava {
+    // Variables de clase para el historial
+    static String[] historial = new String[50];
+    static int contadorHistorial = 0;
+
+    // ==================== FUNCIONES PRINCIPALES ====================
+
+    // 32. Potencia usando recursión
+    // Calcula base^exp mediante recursión. Caso base: exp == 0 retorna 1.
+    public static int potencia(int base, int exp) {
+        if (exp == 0) {
+            String operacion = base + "^0 = 1";
+            guardarEnHistorial(operacion);
+            return 1;
+        }
+        int resultado = base * potencia(base, exp - 1);
+        String operacion = base + "^" + exp + " = " + resultado;
+        guardarEnHistorial(operacion);
+        return resultado;
+    }
+
+    // 33. Máximo Común Divisor (Euclides recursivo)
+    // Calcula MCD usando algoritmo de Euclides: MCD(a,b) = MCD(b, a%b)
+    public static int mcd(int a, int b) {
+        if (b == 0) {
+            String operacion = "MCD(" + a + "," + b + ") = " + a;
+            guardarEnHistorial(operacion);
+            return a;
+        }
+        int resultado = mcd(b, a % b);
+        if (b != 0) { // Evita duplicar la operación del caso base
+            String operacion = "MCD(" + a + "," + b + ") = " + resultado;
+            guardarEnHistorial(operacion);
+        }
+        return resultado;
+    }
+
+    // 34. Verifica si un número es primo usando helper recursivo
+    public static boolean esPrimo(int n) {
+        if (n <= 1) {
+            String operacion = n + " es primo? false (menor o igual a 1)";
+            guardarEnHistorial(operacion);
+            return false;
+        }
+        boolean resultado = esPrimoHelper(n, 2);
+        String operacion = n + " es primo? " + resultado;
+        guardarEnHistorial(operacion);
+        return resultado;
+    }
+
+    // Helper recursivo privado para probar divisores desde divisor hasta raíz cuadrada
+    private static boolean esPrimoHelper(int n, int divisor) {
+        if (divisor * divisor > n) {
+            return true; // No encontró divisores
+        }
+        if (n % divisor == 0) {
+            return false; // Encontró un divisor
+        }
+        return esPrimoHelper(n, divisor + 1);
+    }
+
+    // 35. Genera y muestra los primeros n números de Fibonacci
+    public static void generarSerieFibonacci(int n) {
+        System.out.println("Serie Fibonacci (primeros " + n + " términos):");
+        for (int i = 0; i < n; i++) {
+            int fib = fibonacciRecursivo(i);
+            System.out.print(fib + " ");
+            String operacion = "Fibonacci(" + i + ") = " + fib;
+            guardarEnHistorial(operacion);
+        }
+        System.out.println();
+        String operacion = "Serie Fibonacci generada con " + n + " términos";
+        guardarEnHistorial(operacion);
+    }
+
+    // Helper recursivo para Fibonacci: F(0)=0, F(1)=1, F(n)=F(n-1)+F(n-2)
+    private static int fibonacciRecursivo(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        return fibonacciRecursivo(n - 1) + fibonacciRecursivo(n - 2);
+    }
+
+    // 37 y 36. Guarda una operación en el historial automáticamente
+    private static void guardarEnHistorial(String operacion) {
+        if (contadorHistorial < historial.length) {
+            historial[contadorHistorial] = operacion;
+            contadorHistorial++;
+        }
+    }
+
+    // 38. Muestra todo el historial de operaciones
+    public static void mostrarHistorial() {
+        System.out.println("\n=== HISTORIAL DE OPERACIONES ===");
+        if (contadorHistorial == 0) {
+            System.out.println("No hay operaciones registradas.");
+            return;
+        }
+        for (int i = 0; i < contadorHistorial; i++) {
+            System.out.println((i + 1) + ". " + historial[i]);
+        }
+        System.out.println("Total: " + contadorHistorial + " operaciones");
+    }
+
+    // ==================== MAIN (SOLO LLAMADAS) ====================
+    public static void main(String[] args) {
+        // Prueba de potencia
+        System.out.println("Potencia 2^5 = " + potencia(2, 5));
+        
+        // Prueba de MCD
+        System.out.println("MCD(48, 18) = " + mcd(48, 18));
+        
+        // Prueba de números primos
+        System.out.println("¿17 es primo? " + esPrimo(17));
+        System.out.println("¿20 es primo? " + esPrimo(20));
+        
+        // Prueba de serie Fibonacci
+        generarSerieFibonacci(10);
+        
+        // Mostrar historial completo
+        mostrarHistorial();
+    }
+}
+
