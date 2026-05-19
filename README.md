@@ -26,5 +26,9 @@ Cada reto esta dentro de un archivo llamado HackatonJava, asi que aquí  te brin
 - [@DanielOrtiz15](https://github.com/DanielOrtiz15)
 - [@Katalina04](https://github.com/Katalina04)
 - [@Nicolasc-08](https://github.com/Nicolasc-08)
-
+Jose David Perez
+Alejandro Bonilla
+Daniel Ortiz
+Angie Katalina Fajardo
+Nicolas Correa 
 
